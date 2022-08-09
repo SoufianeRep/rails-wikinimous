@@ -1,0 +1,13 @@
+
+<div class="d-flex gap-2">
+  <h1><%= @article.title %></h1>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa fa-pencil"></i>
+  <% end %>
+  <%= link_to article_path(@article),
+   data: { data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} } do %>
+     <i class="fa fa-trash-o"></i>
+  <% end %>
+</div>
+
+<p><%= @article.content %></p>

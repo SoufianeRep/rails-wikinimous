@@ -1,0 +1,8 @@
+<div class="f-flex flex-column gap-4">
+  <% @articles.each do |article| %>
+    <div class="card p-3">
+      <%= link_to article.title, article_path(article), class: 'fs-1 text-decoration-none' %>
+      <p><%= article.content %></p>
+    </div>
+  <% end %>
+</div>
